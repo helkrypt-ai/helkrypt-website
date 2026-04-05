@@ -78,6 +78,9 @@ export const translations = {
     footer: {
       tagline: "AI for norske bedrifter",
       rights: "Alle rettigheter forbeholdt.",
+      privacyPolicy: "Privacy Policy",
+      personvern: "Personvernerklæring",
+      cookieSettings: "Informasjonskapselinnstillinger",
     },
   },
   en: {
@@ -157,6 +160,9 @@ export const translations = {
     footer: {
       tagline: "AI for Norwegian businesses",
       rights: "All rights reserved.",
+      privacyPolicy: "Privacy Policy",
+      personvern: "Personvernerklæring",
+      cookieSettings: "Cookie settings",
     },
   },
 };

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Translations } from "../i18n";
 
 interface FooterProps {
@@ -18,6 +19,19 @@ export default function Footer({ t }: FooterProps) {
             </span>
           </div>
           <p className="text-sm text-slate-500">{t.footer.tagline}</p>
+          <div className="flex items-center gap-4 text-sm">
+            <Link href="/privacy" className="text-slate-500 hover:text-slate-300 transition-colors">
+              {t.footer.privacyPolicy}
+            </Link>
+            <span className="text-slate-700">·</span>
+            <Link href="/personvern" className="text-slate-500 hover:text-slate-300 transition-colors">
+              {t.footer.personvern}
+            </Link>
+            <span className="text-slate-700">·</span>
+            <button className="text-slate-500 hover:text-slate-300 transition-colors">
+              {t.footer.cookieSettings}
+            </button>
+          </div>
           <p className="text-sm text-slate-600">
             &copy; {new Date().getFullYear()} Helkrypt AI. {t.footer.rights}
           </p>
