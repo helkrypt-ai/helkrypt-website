@@ -69,7 +69,7 @@ export default function PersonvernPage() {
               KI-drevne automatiseringsprodukter, inkludert <strong>MindBridge</strong> og <strong>SvarAI</strong>.
             </p>
             <p>Vi er <strong>behandlingsansvarlig</strong> for personopplysninger som behandles gjennom våre produkter og nettsted.</p>
-            <p><strong>Kontakt:</strong> <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a></p>
+            <p><strong>Kontakt:</strong> <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a></p>
           </Section>
 
           {/* Seksjon 2 */}
@@ -169,7 +169,7 @@ export default function PersonvernPage() {
             </p>
             <p>
               Be om kopi av gjeldende SCCer:{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>
             </p>
           </Section>
 
@@ -222,7 +222,7 @@ export default function PersonvernPage() {
             />
             <p className="mt-4">
               <strong>Send en forespørsel:</strong>{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               — vi svarer innen <strong>30 dager</strong>.
             </p>
             <p>
@@ -251,7 +251,7 @@ export default function PersonvernPage() {
             />
             <p className="mt-4">
               <strong>Send en CCPA-forespørsel:</strong>{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               (emne: «CCPA-forespørsel») — vi svarer innen <strong>45 dager</strong>.
             </p>
           </Section>
@@ -261,7 +261,7 @@ export default function PersonvernPage() {
             <p>
               Produktene våre er ikke beregnet på brukere under <strong>16 år</strong> (eller 13 år i USA).
               Vi samler ikke bevisst inn data fra barn. Kontakt{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               hvis du mener et barn har sendt inn data.
             </p>
           </Section>
@@ -298,7 +298,7 @@ export default function PersonvernPage() {
           <Section id="seksjon-14" title="14. Kontakt oss">
             <p>
               <strong>Helkrypt AI AS</strong><br />
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a><br />
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a><br />
               Norge
             </p>
             <p>

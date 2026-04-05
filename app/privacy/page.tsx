@@ -69,7 +69,7 @@ export default function PrivacyPage() {
               AI-powered automation products, including <strong>MindBridge</strong> and <strong>SvarAI</strong>.
             </p>
             <p>We are the <strong>data controller</strong> for personal data processed through our products and website.</p>
-            <p><strong>Contact:</strong> <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a></p>
+            <p><strong>Contact:</strong> <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a></p>
           </Section>
 
           {/* Section 2 */}
@@ -169,7 +169,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               Request a copy of applicable SCCs:{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>
             </p>
           </Section>
 
@@ -221,7 +221,7 @@ export default function PrivacyPage() {
             />
             <p className="mt-4">
               <strong>Submit a request:</strong>{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               — we respond within <strong>30 days</strong>.
             </p>
             <p>
@@ -250,7 +250,7 @@ export default function PrivacyPage() {
             />
             <p className="mt-4">
               <strong>Submit a CCPA request:</strong>{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               (subject: &ldquo;CCPA Request&rdquo;) — we respond within <strong>45 days</strong>.
             </p>
           </Section>
@@ -260,7 +260,7 @@ export default function PrivacyPage() {
             <p>
               Our products are not intended for users under <strong>16</strong> (or 13 in the US). We do not knowingly
               collect data from children. Contact{" "}
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a>{" "}
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a>{" "}
               if you believe a child has submitted data.
             </p>
           </Section>
@@ -297,7 +297,7 @@ export default function PrivacyPage() {
           <Section id="section-14" title="14. Contact Us">
             <p>
               <strong>Helkrypt AI AS</strong><br />
-              <a href="mailto:privacy@helkrypt.ai" className="text-indigo-600 hover:underline">privacy@helkrypt.ai</a><br />
+              <a href="mailto:privacy@helkrypt.no" className="text-indigo-600 hover:underline">privacy@helkrypt.no</a><br />
               Norge
             </p>
             <p>
