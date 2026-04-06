@@ -13,22 +13,22 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { href: "#products", label: t.nav.products },
+    { href: "#services", label: t.nav.services },
     { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/80 backdrop-blur-xl border-b border-white/5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center">
+          <a href="#" className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
               <span className="text-white font-bold text-sm">H</span>
             </div>
-            <span className="font-bold text-gray-900 text-lg tracking-tight">
-              Helkrypt<span className="text-indigo-600"> AI</span>
+            <span className="font-semibold text-white text-lg tracking-tight">
+              Helkrypt<span className="text-indigo-400"> AI</span>
             </span>
           </a>
 
@@ -38,7 +38,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-600 hover:text-indigo-600 text-sm font-medium transition-colors"
+                className="text-zinc-400 hover:text-white text-sm font-medium transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -46,24 +46,26 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
           </div>
 
           {/* Locale switcher + CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => onLocaleChange(locale === "no" ? "en" : "no")}
-              className="text-sm font-medium text-gray-500 hover:text-indigo-600 transition-colors border border-gray-200 rounded-md px-3 py-1.5"
+              className="text-sm font-medium text-zinc-500 hover:text-white transition-colors border border-zinc-800 rounded-lg px-3 py-1.5 hover:border-zinc-600"
             >
               {locale === "no" ? "EN" : "NO"}
             </button>
             <a
-              href="#contact"
-              className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+              href={t.hero.ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
             >
-              {t.nav.contact}
+              {t.nav.cta}
             </a>
           </div>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-gray-600 hover:text-indigo-600"
+            className="md:hidden text-zinc-400 hover:text-white"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -80,26 +82,37 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-[#09090b]/95 backdrop-blur-xl border-t border-white/5 px-4 py-6 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-indigo-600 font-medium"
+              className="text-zinc-300 hover:text-white font-medium py-2"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => {
-              onLocaleChange(locale === "no" ? "en" : "no");
-              setMenuOpen(false);
-            }}
-            className="text-sm font-medium text-gray-500 border border-gray-200 rounded-md px-3 py-1.5 w-fit"
-          >
-            {locale === "no" ? "Switch to English" : "Bytt til norsk"}
-          </button>
+          <div className="flex items-center gap-3 pt-2 border-t border-white/5">
+            <button
+              onClick={() => {
+                onLocaleChange(locale === "no" ? "en" : "no");
+                setMenuOpen(false);
+              }}
+              className="text-sm font-medium text-zinc-500 border border-zinc-800 rounded-lg px-3 py-2"
+            >
+              {locale === "no" ? "Switch to English" : "Bytt til norsk"}
+            </button>
+            <a
+              href={t.hero.ctaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-lg"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t.nav.cta}
+            </a>
+          </div>
         </div>
       )}
     </nav>

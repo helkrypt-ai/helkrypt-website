@@ -5,6 +5,7 @@ import { translations, Locale } from "./i18n";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Products from "./components/Products";
+import Process from "./components/Process";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -14,10 +15,11 @@ export default function Home() {
   const t = translations[locale];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#09090b]">
       <Navbar t={t} locale={locale} onLocaleChange={setLocale} />
       <Hero t={t} />
       <Products t={t} />
+      <Process t={t} />
       <About t={t} />
       <Contact t={t} />
       <Footer t={t} />

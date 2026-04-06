@@ -13,13 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Helkrypt AI — AI for norske bedrifter",
+  title: "Helkrypt AI — Din partner for smartere løsninger",
   description:
-    "Helkrypt AI hjelper norske SMB-er med å automatisere prosesser, integrere systemer og bygge smarte AI-agenter. AI Integration Suite, Agentic Workflow Builder, AI Onboarding Program.",
-  keywords: ["AI", "kunstig intelligens", "norske bedrifter", "SMB", "automatisering", "Visma", "Tripletex"],
+    "Vi hjelper norske SMB-er med å spare 5+ timer i uken gjennom AI-automatisering. Fra audit til implementasjon, tilpasset din bedrift.",
+  keywords: [
+    "AI",
+    "kunstig intelligens",
+    "norske bedrifter",
+    "SMB",
+    "automatisering",
+    "AI-audit",
+    "AI-strategi",
+    "workflow-automatisering",
+  ],
   openGraph: {
-    title: "Helkrypt AI — AI for norske bedrifter",
-    description: "Automatiser din bedrift med AI. Integrert med norske systemer.",
+    title: "Helkrypt AI — Din partner for smartere løsninger",
+    description:
+      "Vi hjelper norske SMB-er med å spare 5+ timer i uken gjennom AI-automatisering.",
     locale: "nb_NO",
     type: "website",
   },
@@ -32,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="nb"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

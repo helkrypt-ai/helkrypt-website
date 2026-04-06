@@ -4,79 +4,120 @@ export const translations = {
   no: {
     nav: {
       home: "Hjem",
-      products: "Produkter",
+      services: "Tjenester",
       about: "Om oss",
       contact: "Kontakt",
+      cta: "Book en samtale",
     },
     hero: {
-      badge: "AI for norske bedrifter",
-      headline: "Gjør din bedrift klar for fremtiden med AI",
+      badge: "AI-automatisering for norske bedrifter",
+      headline: "Din partner for smartere løsninger",
       subheadline:
-        "Helkrypt AI hjelper norske SMB-er med å automatisere prosesser, integrere systemer og bygge smarte arbeidsflyter — uten behov for store IT-ressurser.",
-      cta: "Kom i gang",
-      ctaSecondary: "Les mer",
+        "Vi hjelper norske SMB-er med å spare 5+ timer i uken gjennom AI-automatisering — fra audit til implementasjon, tilpasset din bedrift.",
+      cta: "Book en gratis samtale",
+      ctaSecondary: "Se våre tjenester",
+      ctaLink: "https://calendly.com/helkrypt/30min",
     },
-    products: {
-      sectionTitle: "Våre løsninger",
-      sectionSub: "Alt du trenger for å ta i bruk AI i din bedrift",
+    services: {
+      sectionTitle: "Tjenester",
+      sectionSub:
+        "Fra behovskartlegging til full implementasjon — vi tar deg gjennom hele AI-reisen.",
       items: [
         {
-          name: "AI Integration Suite",
+          name: "AI-audit",
           description:
-            "Sømløs integrasjon mot Visma, Tripletex, 24SevenOffice og andre norske systemer. La AI håndtere dataflyten mellom systemene dine automatisk.",
+            "En 2-timers gjennomgang av bedriften din der vi kartlegger konkret hva du kan automatisere og spare tid på. Du får en handlingsplan du kan bruke med en gang.",
+          price: "2 500 NOK",
           features: [
-            "Kobler til 50+ norske og internasjonale systemer",
-            "Automatisk datasyknronisering",
-            "Ingen koding nødvendig",
+            "2 timers gjennomgang",
+            "Konkret handlingsplan",
+            "Money-back garanti",
           ],
         },
         {
-          name: "Agentic Workflow Builder",
+          name: "AI-workshop",
           description:
-            "Bygg intelligente AI-agenter som jobber for deg 24/7. Automatiser repeterende oppgaver og la agentene ta avgjørelser basert på dine regler.",
+            "Halvdags workshop for teamet ditt der vi går gjennom AI-muligheter i praksis. Perfekt for å komme i gang og bygge intern kompetanse.",
+          price: "4 500 NOK",
           features: [
-            "Visuell flytbygger",
-            "Forhåndslagde maler for norske bedrifter",
-            "Full revisjonskontroll",
+            "Halvdags intensivkurs",
+            "Praktiske øvelser",
+            "Tilpasset din bransje",
           ],
         },
         {
-          name: "AI Onboarding Program",
+          name: "Workflow-automatisering",
           description:
-            "Strukturert program for å komme raskt i gang med AI. Vi guider deg fra idé til implementasjon — tilpasset din bedrift og bransje.",
+            "Vi bygger skreddersydde AI-drevne arbeidsflyter som automatiserer repetitive oppgaver — fakturering, kundehåndtering, rapportering og mer.",
+          price: "Fra 5 000 NOK",
           features: [
-            "Behovskartlegging og strategi",
-            "Opplæring av ansatte",
-            "Løpende støtte og optimalisering",
+            "Skreddersydd for din bedrift",
+            "Integrasjon med norske systemer",
+            "Komplett oppsett og opplæring",
           ],
+        },
+        {
+          name: "AI-strategi",
+          description:
+            "Et mini-prosjekt der vi utvikler en helhetlig AI-strategi for bedriften din. Fra prioritering av tiltak til teknologivalg og veikart.",
+          price: "10 000–15 000 NOK",
+          features: [
+            "Behovskartlegging og analyse",
+            "Prioritert tiltaksliste",
+            "Implementeringsveikart",
+          ],
+        },
+      ],
+    },
+    process: {
+      sectionTitle: "Slik jobber vi",
+      steps: [
+        {
+          title: "Kartlegging",
+          description:
+            "Vi starter med å forstå bedriften din, prosessene og flaskehalsene. Gratis 30-min samtale.",
+        },
+        {
+          title: "Løsningsdesign",
+          description:
+            "Vi designer en skreddersydd AI-løsning basert på dine behov og eksisterende systemer.",
+        },
+        {
+          title: "Implementering",
+          description:
+            "Vi bygger, tester og ruller ut løsningen — og sørger for at teamet ditt kan bruke den.",
         },
       ],
     },
     about: {
       sectionTitle: "Om Helkrypt AI",
-      body: "Helkrypt AI er et norsk selskap som spesialiserer seg på å hjelpe små og mellomstore bedrifter med å ta i bruk kunstig intelligens på en praktisk og lønnsom måte. Vi kombinerer dyp teknisk kompetanse med forståelse for norske forretningsforhold og regelverk.",
-      stats: [
-        { label: "Norske kunder", value: "200+" },
-        { label: "Automatiserte prosesser", value: "1500+" },
-        { label: "Timer spart per uke", value: "5000+" },
+      body: "Helkrypt AI er et norsk selskap som hjelper små og mellomstore bedrifter med å ta i bruk kunstig intelligens på en praktisk og lønnsom måte. Vi kombinerer dyp teknisk kompetanse med forståelse for norske forretningsforhold.",
+      highlights: [
+        "Norsk selskap — vi forstår norske systemer og regelverk",
+        "Fokus på konkrete resultater og tidsbesparelser",
+        "Fra audit til full implementasjon — alt under ett tak",
       ],
     },
     contact: {
-      sectionTitle: "Ta kontakt",
+      sectionTitle: "Klar for å komme i gang?",
       sectionSub:
-        "Interessert i å se hva Helkrypt AI kan gjøre for din bedrift? Fyll ut skjemaet, så tar vi kontakt.",
+        "Book en gratis 30-minutters samtale, eller send oss en melding. Vi svarer innen 24 timer.",
+      bookingCta: "Book gratis samtale",
+      bookingLink: "https://calendly.com/helkrypt/30min",
+      formTitle: "Eller send oss en melding",
       form: {
         name: "Navn",
         email: "E-post",
         company: "Bedrift",
         message: "Melding",
-        messagePlaceholder: "Fortell oss litt om din bedrift og hva du ønsker å automatisere...",
+        messagePlaceholder:
+          "Fortell oss litt om din bedrift og hva du ønsker å automatisere...",
         submit: "Send forespørsel",
-        success: "Takk! Vi tar kontakt snart.",
+        success: "Takk! Vi tar kontakt innen 24 timer.",
       },
     },
     footer: {
-      tagline: "AI for norske bedrifter",
+      tagline: "Din partner for smartere løsninger",
       rights: "Alle rettigheter forbeholdt.",
       privacyPolicy: "Privacy Policy",
       personvern: "Personvernerklæring",
@@ -86,79 +127,120 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
-      products: "Products",
+      services: "Services",
       about: "About",
       contact: "Contact",
+      cta: "Book a call",
     },
     hero: {
-      badge: "AI for Norwegian businesses",
-      headline: "Prepare your business for the future with AI",
+      badge: "AI automation for Norwegian businesses",
+      headline: "Your partner for smarter solutions",
       subheadline:
-        "Helkrypt AI helps Norwegian SMBs automate processes, integrate systems, and build intelligent workflows — without the need for large IT resources.",
-      cta: "Get started",
-      ctaSecondary: "Learn more",
+        "We help Norwegian SMBs save 5+ hours per week through AI automation — from audit to implementation, tailored to your business.",
+      cta: "Book a free call",
+      ctaSecondary: "See our services",
+      ctaLink: "https://calendly.com/helkrypt/30min",
     },
-    products: {
-      sectionTitle: "Our solutions",
-      sectionSub: "Everything you need to adopt AI in your business",
+    services: {
+      sectionTitle: "Services",
+      sectionSub:
+        "From needs assessment to full implementation — we guide you through the entire AI journey.",
       items: [
         {
-          name: "AI Integration Suite",
+          name: "AI Audit",
           description:
-            "Seamless integration with Visma, Tripletex, 24SevenOffice, and other Norwegian systems. Let AI handle data flows between your systems automatically.",
+            "A 2-hour review of your business where we map out exactly what you can automate and save time on. You get an actionable plan you can use right away.",
+          price: "2,500 NOK",
           features: [
-            "Connects to 50+ Norwegian and international systems",
-            "Automatic data synchronization",
-            "No coding required",
+            "2-hour review",
+            "Actionable plan",
+            "Money-back guarantee",
           ],
         },
         {
-          name: "Agentic Workflow Builder",
+          name: "AI Workshop",
           description:
-            "Build intelligent AI agents that work for you 24/7. Automate repetitive tasks and let agents make decisions based on your rules.",
+            "Half-day workshop for your team where we explore AI opportunities in practice. Perfect for getting started and building internal competency.",
+          price: "4,500 NOK",
           features: [
-            "Visual flow builder",
-            "Pre-built templates for Norwegian businesses",
-            "Full audit trail",
+            "Half-day intensive course",
+            "Hands-on exercises",
+            "Tailored to your industry",
           ],
         },
         {
-          name: "AI Onboarding Program",
+          name: "Workflow Automation",
           description:
-            "Structured program to get started with AI quickly. We guide you from idea to implementation — tailored to your business and industry.",
+            "We build custom AI-powered workflows that automate repetitive tasks — invoicing, customer management, reporting, and more.",
+          price: "From 5,000 NOK",
           features: [
-            "Needs assessment and strategy",
-            "Employee training",
-            "Ongoing support and optimization",
+            "Custom-built for your business",
+            "Integration with Norwegian systems",
+            "Complete setup and training",
           ],
+        },
+        {
+          name: "AI Strategy",
+          description:
+            "A mini-project where we develop a comprehensive AI strategy for your business. From prioritizing initiatives to technology choices and roadmap.",
+          price: "10,000–15,000 NOK",
+          features: [
+            "Needs assessment and analysis",
+            "Prioritized action list",
+            "Implementation roadmap",
+          ],
+        },
+      ],
+    },
+    process: {
+      sectionTitle: "How we work",
+      steps: [
+        {
+          title: "Discovery",
+          description:
+            "We start by understanding your business, processes, and bottlenecks. Free 30-min call.",
+        },
+        {
+          title: "Solution Design",
+          description:
+            "We design a custom AI solution based on your needs and existing systems.",
+        },
+        {
+          title: "Implementation",
+          description:
+            "We build, test, and deploy the solution — and make sure your team can use it.",
         },
       ],
     },
     about: {
       sectionTitle: "About Helkrypt AI",
-      body: "Helkrypt AI is a Norwegian company specializing in helping small and medium-sized businesses adopt artificial intelligence in a practical and profitable way. We combine deep technical expertise with an understanding of Norwegian business conditions and regulations.",
-      stats: [
-        { label: "Norwegian customers", value: "200+" },
-        { label: "Automated processes", value: "1500+" },
-        { label: "Hours saved per week", value: "5000+" },
+      body: "Helkrypt AI is a Norwegian company that helps small and medium-sized businesses adopt artificial intelligence in a practical and profitable way. We combine deep technical expertise with an understanding of Norwegian business conditions.",
+      highlights: [
+        "Norwegian company — we understand local systems and regulations",
+        "Focus on concrete results and time savings",
+        "From audit to full implementation — everything under one roof",
       ],
     },
     contact: {
-      sectionTitle: "Get in touch",
+      sectionTitle: "Ready to get started?",
       sectionSub:
-        "Interested in seeing what Helkrypt AI can do for your business? Fill out the form and we'll be in touch.",
+        "Book a free 30-minute call, or send us a message. We respond within 24 hours.",
+      bookingCta: "Book free call",
+      bookingLink: "https://calendly.com/helkrypt/30min",
+      formTitle: "Or send us a message",
       form: {
         name: "Name",
         email: "Email",
         company: "Company",
         message: "Message",
-        messagePlaceholder: "Tell us a bit about your business and what you want to automate...",
+        messagePlaceholder:
+          "Tell us about your business and what you want to automate...",
         submit: "Send request",
-        success: "Thank you! We'll be in touch soon.",
+        success: "Thank you! We'll be in touch within 24 hours.",
       },
     },
     footer: {
-      tagline: "AI for Norwegian businesses",
+      tagline: "Your partner for smarter solutions",
       rights: "All rights reserved.",
       privacyPolicy: "Privacy Policy",
       personvern: "Personvernerklæring",
@@ -167,4 +249,4 @@ export const translations = {
   },
 };
 
-export type Translations = typeof translations.no;
+export type Translations = (typeof translations)["no"];
