@@ -39,7 +39,11 @@ export async function POST(request: NextRequest) {
   const projectId = process.env.PAPERCLIP_PROJECT_ID;
 
   if (!paperclipApiUrl || !paperclipApiKey || !paperclipCompanyId) {
-    console.error("Missing Paperclip environment variables");
+    const missing = [];
+    if (!paperclipApiUrl) missing.push("PAPERCLIP_API_URL");
+    if (!paperclipApiKey) missing.push("PAPERCLIP_API_KEY");
+    if (!paperclipCompanyId) missing.push("PAPERCLIP_COMPANY_ID");
+    console.error("Missing required Paperclip environment variables:", missing.join(", "));
     // Still return success to the customer — internal failures shouldn't surface
     return NextResponse.json({ success: true });
   }
@@ -77,7 +81,6 @@ _Innkommet via kontaktskjema på helkrypt-website.vercel.app_
     description,
     status: "todo",
     priority: "high",
-    companyId: paperclipCompanyId,
   };
 
   if (erikAgentId) issuePayload.assigneeAgentId = erikAgentId;
@@ -99,10 +102,21 @@ _Innkommet via kontaktskjema på helkrypt-website.vercel.app_
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("Paperclip issue creation failed:", response.status, errorText);
+      console.error("Paperclip issue creation failed:", {
+        status: response.status,
+        statusText: response.statusText,
+        error: errorText,
+        payload: issuePayload,
+      });
+    } else {
+      const responseData = await response.json();
+      console.log("Paperclip issue created successfully:", responseData.id || responseData.identifier);
     }
   } catch (err) {
-    console.error("Failed to create Paperclip issue:", err);
+    console.error("Failed to create Paperclip issue:", {
+      error: err instanceof Error ? err.message : String(err),
+      stack: err instanceof Error ? err.stack : undefined,
+    });
   }
 
   // Always return success to the customer
