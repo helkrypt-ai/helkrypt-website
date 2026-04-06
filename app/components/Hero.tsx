@@ -11,9 +11,9 @@ export default function Hero({ t }: HeroProps) {
       <div className="absolute inset-0 bg-grid" />
 
       {/* Gradient orbs — soft and light */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-[128px]" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-violet-200/25 rounded-full blur-[128px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-100/15 rounded-full blur-[128px]" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-3xl will-change-auto" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-violet-200/25 rounded-full blur-3xl will-change-auto" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-100/15 rounded-full blur-3xl will-change-auto" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
