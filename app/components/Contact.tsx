@@ -12,6 +12,7 @@ export default function Contact({ t }: ContactProps) {
     name: "",
     email: "",
     company: "",
+    phone: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -123,16 +124,30 @@ export default function Contact({ t }: ContactProps) {
                 </div>
               </div>
 
-              {/* Company */}
-              <div>
-                <label className="block text-sm font-medium text-zinc-400 mb-1.5">{f.company}</label>
-                <input
-                  type="text"
-                  value={formData.company}
-                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  className="w-full rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition"
-                  placeholder="Bedrift AS"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Company */}
+                <div>
+                  <label className="block text-sm font-medium text-zinc-400 mb-1.5">{f.company}</label>
+                  <input
+                    type="text"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition"
+                    placeholder="Bedrift AS"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-sm font-medium text-zinc-400 mb-1.5">{f.phone}</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-white placeholder-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition"
+                    placeholder="+47 123 45 678"
+                  />
+                </div>
               </div>
 
               {/* Message */}

@@ -4,6 +4,7 @@ interface ContactFormData {
   name: string;
   email: string;
   company?: string;
+  phone?: string;
   message: string;
 }
 
@@ -16,7 +17,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { name, email, company, message } = body;
+  const { name, email, company, phone, message } = body;
 
   if (!name || !email || !message) {
     return NextResponse.json(
@@ -51,6 +52,7 @@ export async function POST(request: NextRequest) {
 
 **Navn:** ${name}
 **E-post:** ${email}
+**Telefon:** ${phone || "ikke oppgitt"}
 **Bedrift:** ${company || "ikke oppgitt"}
 
 ### Melding
