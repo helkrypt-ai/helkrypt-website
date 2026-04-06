@@ -1,10 +1,9 @@
-import { Translations } from "../i18n";
+"use client";
 
-interface ProcessProps {
-  t: Translations;
-}
+import { useLocale } from "./LocaleProvider";
 
-export default function Process({ t }: ProcessProps) {
+export default function Process() {
+  const { t } = useLocale();
   return (
     <section className="relative py-28 bg-white">
       {/* Subtle divider gradient */}

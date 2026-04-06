@@ -1,10 +1,9 @@
-import { Translations } from "../i18n";
+"use client";
 
-interface HeroProps {
-  t: Translations;
-}
+import { useLocale } from "./LocaleProvider";
 
-export default function Hero({ t }: HeroProps) {
+export default function Hero() {
+  const { t } = useLocale();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-16">
       {/* Background grid */}

@@ -1,10 +1,9 @@
-import { Translations } from "../i18n";
+"use client";
 
-interface AboutProps {
-  t: Translations;
-}
+import { useLocale } from "./LocaleProvider";
 
-export default function About({ t }: AboutProps) {
+export default function About() {
+  const { t } = useLocale();
   return (
     <section id="about" className="relative py-28 bg-slate-50/50">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-300/30 to-transparent" />

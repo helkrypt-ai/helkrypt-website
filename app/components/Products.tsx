@@ -1,8 +1,6 @@
-import { Translations } from "../i18n";
+"use client";
 
-interface ProductsProps {
-  t: Translations;
-}
+import { useLocale } from "./LocaleProvider";
 
 const icons = [
   // AI Audit - magnifying glass
@@ -30,7 +28,8 @@ const accentColors = [
   { border: "border-emerald-200", bg: "bg-emerald-50", text: "text-emerald-600", icon: "text-emerald-600" },
 ];
 
-export default function Products({ t }: ProductsProps) {
+export default function Products() {
+  const { t } = useLocale();
   return (
     <section id="services" className="relative py-28 bg-slate-50/50">
       <div className="absolute inset-0 bg-dots opacity-50" />

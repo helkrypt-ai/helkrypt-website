@@ -1,11 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import { Translations } from "../i18n";
+import { useLocale } from "./LocaleProvider";
 
-interface FooterProps {
-  t: Translations;
-}
-
-export default function Footer({ t }: FooterProps) {
+export default function Footer() {
+  const { t } = useLocale();
   return (
     <footer className="bg-slate-50 border-t border-slate-200 py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

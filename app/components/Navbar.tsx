@@ -1,15 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Translations, Locale } from "../i18n";
+import { useLocale } from "./LocaleProvider";
 
-interface NavbarProps {
-  t: Translations;
-  locale: Locale;
-  onLocaleChange: (locale: Locale) => void;
-}
-
-export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
+export default function Navbar() {
+  const { t, locale, setLocale } = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
@@ -49,7 +44,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
           {/* Locale switcher + CTA */}
           <div className="hidden md:flex items-center gap-3">
             <button
-              onClick={() => onLocaleChange(locale === "no" ? "en" : "no")}
+              onClick={() => setLocale(locale === "no" ? "en" : "no")}
               className="text-sm font-medium text-slate-400 hover:text-slate-700 transition-colors border border-slate-200 rounded-lg px-3 py-1.5 hover:border-slate-300"
             >
               {locale === "no" ? "EN" : "NO"}
@@ -97,7 +92,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
           <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
             <button
               onClick={() => {
-                onLocaleChange(locale === "no" ? "en" : "no");
+                setLocale(locale === "no" ? "en" : "no");
                 setMenuOpen(false);
               }}
               className="text-sm font-medium text-slate-500 border border-slate-200 rounded-lg px-3 py-2"
