@@ -35,68 +35,109 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationSchema = {
+const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   name: "Helkrypt AI",
+  description: "AI-automatisering for norske SMBer. Vi hjelper små og mellomstore bedrifter med prosessautomatisering, AI-kundestøtte og workflow-automatisering.",
   url: "https://www.helkrypt.no",
   logo: "https://www.helkrypt.no/favicon.ico",
-  description:
-    "Helkrypt AI hjelper norske SMB-er med å automatisere prosesser, integrere systemer og bygge smarte AI-agenter.",
+  image: "https://www.helkrypt.no/favicon.ico",
   address: {
     "@type": "PostalAddress",
+    addressLocality: "Oslo",
     addressCountry: "NO",
   },
-  sameAs: [],
+  priceRange: "2500-15000 NOK",
+  currenciesAccepted: "NOK",
+  paymentAccepted: "Invoice, Bank Transfer",
+  areaServed: {
+    "@type": "Country",
+    name: "Norway",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
     availableLanguage: ["Norwegian", "English"],
   },
+  sameAs: [],
 };
 
-const productSchemas = [
+const serviceSchemas = [
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "AI Integration Suite",
-    description:
-      "Sømløs integrasjon mot Visma, Tripletex, 24SevenOffice og andre norske systemer. La AI håndtere dataflyten mellom systemene dine automatisk.",
-    brand: { "@type": "Brand", name: "Helkrypt AI" },
+    "@type": "Service",
+    name: "AI-automatiseringsaudit",
+    description: "2-timers audit av dine prosesser og automatiseringspotensial. Vi identifiserer de største mulighetene for AI-automatisering i din bedrift.",
+    provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
+    areaServed: { "@type": "Country", name: "Norway" },
+    serviceType: "AI Consulting",
     offers: {
       "@type": "Offer",
+      price: "2500",
       priceCurrency: "NOK",
       availability: "https://schema.org/InStock",
     },
-    category: "Software",
   },
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Agentic Workflow Builder",
-    description:
-      "Bygg intelligente AI-agenter som jobber for deg 24/7. Automatiser repeterende oppgaver og la agentene ta avgjørelser basert på dine regler.",
-    brand: { "@type": "Brand", name: "Helkrypt AI" },
+    "@type": "Service",
+    name: "n8n Workflow-bygg",
+    description: "Skreddersydd automatiseringsarbeidsflyt bygget med n8n. Integrer systemer som Visma, Tripletex og 24SevenOffice uten koding.",
+    provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
+    areaServed: { "@type": "Country", name: "Norway" },
+    serviceType: "Workflow Automation",
     offers: {
       "@type": "Offer",
+      price: "5000",
       priceCurrency: "NOK",
       availability: "https://schema.org/InStock",
     },
-    category: "Software",
   },
   {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "AI Onboarding Program",
-    description:
-      "Strukturert program for å komme raskt i gang med AI. Vi guider deg fra idé til implementasjon — tilpasset din bedrift og bransje.",
-    brand: { "@type": "Brand", name: "Helkrypt AI" },
+    "@type": "Service",
+    name: "AI Workshop",
+    description: "Halvdags workshop for å lære teamet ditt å bruke AI-verktøy effektivt i hverdagen. Tilpasset din bransje og behov.",
+    provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
+    areaServed: { "@type": "Country", name: "Norway" },
+    serviceType: "AI Training",
     offers: {
       "@type": "Offer",
+      price: "4500",
       priceCurrency: "NOK",
       availability: "https://schema.org/InStock",
     },
-    category: "Professional Services",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI-strategi miniprosjekt",
+    description: "Strategisk miniprosjekt for å kartlegge og planlegge AI-implementering i din bedrift. Fra idé til handlingsplan.",
+    provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
+    areaServed: { "@type": "Country", name: "Norway" },
+    serviceType: "AI Strategy Consulting",
+    offers: {
+      "@type": "Offer",
+      price: "10000",
+      priceCurrency: "NOK",
+      availability: "https://schema.org/InStock",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Månedlig AI-retainer",
+    description: "Løpende støtte og vedlikehold av AI-automatiseringer. Inkluderer overvåking, optimalisering og nye arbeidsflyter etter behov.",
+    provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
+    areaServed: { "@type": "Country", name: "Norway" },
+    serviceType: "AI Managed Services",
+    offers: {
+      "@type": "Offer",
+      price: "2500",
+      priceCurrency: "NOK",
+      availability: "https://schema.org/InStock",
+    },
   },
 ];
 
@@ -169,10 +210,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
+            __html: JSON.stringify(localBusinessSchema),
           }}
         />
-        {productSchemas.map((schema, i) => (
+        {serviceSchemas.map((schema, i) => (
           <script
             key={i}
             type="application/ld+json"
