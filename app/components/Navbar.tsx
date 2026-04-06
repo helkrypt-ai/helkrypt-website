@@ -14,12 +14,13 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
 
   const links = [
     { href: "#services", label: t.nav.services },
+    { href: "/blogg", label: t.nav.blog },
     { href: "#about", label: t.nav.about },
     { href: "#contact", label: t.nav.contact },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/80 backdrop-blur-xl border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -27,8 +28,8 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
               <span className="text-white font-bold text-sm">H</span>
             </div>
-            <span className="font-semibold text-white text-lg tracking-tight">
-              Helkrypt<span className="text-indigo-400"> AI</span>
+            <span className="font-semibold text-slate-900 text-lg tracking-tight">
+              Helkrypt<span className="text-indigo-600"> AI</span>
             </span>
           </a>
 
@@ -38,7 +39,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-zinc-400 hover:text-white text-sm font-medium transition-colors duration-200"
+                className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -49,7 +50,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => onLocaleChange(locale === "no" ? "en" : "no")}
-              className="text-sm font-medium text-zinc-500 hover:text-white transition-colors border border-zinc-800 rounded-lg px-3 py-1.5 hover:border-zinc-600"
+              className="text-sm font-medium text-slate-400 hover:text-slate-700 transition-colors border border-slate-200 rounded-lg px-3 py-1.5 hover:border-slate-300"
             >
               {locale === "no" ? "EN" : "NO"}
             </button>
@@ -57,7 +58,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
               href={t.hero.ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
+              className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
             >
               {t.nav.cta}
             </a>
@@ -65,7 +66,7 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-zinc-400 hover:text-white"
+            className="md:hidden text-slate-500 hover:text-slate-900"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -82,24 +83,24 @@ export default function Navbar({ t, locale, onLocaleChange }: NavbarProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#09090b]/95 backdrop-blur-xl border-t border-white/5 px-4 py-6 flex flex-col gap-4">
+        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/60 px-4 py-6 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-zinc-300 hover:text-white font-medium py-2"
+              className="text-slate-700 hover:text-slate-900 font-medium py-2"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-3 pt-2 border-t border-white/5">
+          <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
             <button
               onClick={() => {
                 onLocaleChange(locale === "no" ? "en" : "no");
                 setMenuOpen(false);
               }}
-              className="text-sm font-medium text-zinc-500 border border-zinc-800 rounded-lg px-3 py-2"
+              className="text-sm font-medium text-slate-500 border border-slate-200 rounded-lg px-3 py-2"
             >
               {locale === "no" ? "Switch to English" : "Bytt til norsk"}
             </button>

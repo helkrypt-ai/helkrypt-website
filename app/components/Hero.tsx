@@ -6,20 +6,20 @@ interface HeroProps {
 
 export default function Hero({ t }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#09090b] pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white pt-16">
       {/* Background grid */}
       <div className="absolute inset-0 bg-grid" />
 
-      {/* Gradient orbs */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[128px]" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[128px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[128px]" />
+      {/* Gradient orbs — soft and light */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-[128px]" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-violet-200/25 rounded-full blur-[128px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-100/15 rounded-full blur-[128px]" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8 animate-fade-in-up">
-          <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-          <span className="text-zinc-400 text-sm font-medium">{t.hero.badge}</span>
+        <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-full px-4 py-1.5 mb-8 animate-fade-in-up">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+          <span className="text-indigo-700 text-sm font-medium">{t.hero.badge}</span>
         </div>
 
         {/* Headline */}
@@ -28,7 +28,7 @@ export default function Hero({ t }: HeroProps) {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delay-2">
+        <p className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delay-2">
           {t.hero.subheadline}
         </p>
 
@@ -38,14 +38,14 @@ export default function Hero({ t }: HeroProps) {
             href={t.hero.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25"
+            className="group relative bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/25"
           >
             {t.hero.cta}
             <span className="inline-block ml-2 transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
           </a>
           <a
             href="#services"
-            className="bg-white/5 hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+            className="bg-white hover:bg-slate-50 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-200 hover:border-slate-300 transition-all duration-300 shadow-sm"
           >
             {t.hero.ctaSecondary}
           </a>
@@ -61,20 +61,20 @@ export default function Hero({ t }: HeroProps) {
             ].map((color, i) => (
               <div
                 key={i}
-                className={`w-8 h-8 rounded-full ${color} border-2 border-[#09090b] flex items-center justify-center text-white text-xs font-bold`}
+                className={`w-8 h-8 rounded-full ${color} border-2 border-white flex items-center justify-center text-white text-xs font-bold shadow-sm`}
               >
                 {["V", "T", "F"][i]}
               </div>
             ))}
           </div>
-          <p className="text-zinc-500 text-sm">
+          <p className="text-slate-400 text-sm">
             Integrerer med Visma, Tripletex, Fiken og 50+ systemer
           </p>
         </div>
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#09090b] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

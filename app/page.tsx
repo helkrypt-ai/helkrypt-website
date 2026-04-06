@@ -15,7 +15,7 @@ export default function Home() {
   const t = translations[locale];
 
   return (
-    <main className="min-h-screen bg-[#09090b]">
+    <main className="min-h-screen bg-white">
       <Navbar t={t} locale={locale} onLocaleChange={setLocale} />
       <Hero t={t} />
       <Products t={t} />

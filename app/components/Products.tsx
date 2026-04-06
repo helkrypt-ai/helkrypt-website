@@ -24,23 +24,23 @@ const icons = [
 ];
 
 const accentColors = [
-  { border: "border-indigo-500/20", bg: "bg-indigo-500/10", text: "text-indigo-400", icon: "text-indigo-400" },
-  { border: "border-violet-500/20", bg: "bg-violet-500/10", text: "text-violet-400", icon: "text-violet-400" },
-  { border: "border-cyan-500/20", bg: "bg-cyan-500/10", text: "text-cyan-400", icon: "text-cyan-400" },
-  { border: "border-emerald-500/20", bg: "bg-emerald-500/10", text: "text-emerald-400", icon: "text-emerald-400" },
+  { border: "border-indigo-200", bg: "bg-indigo-50", text: "text-indigo-600", icon: "text-indigo-600" },
+  { border: "border-violet-200", bg: "bg-violet-50", text: "text-violet-600", icon: "text-violet-600" },
+  { border: "border-cyan-200", bg: "bg-cyan-50", text: "text-cyan-600", icon: "text-cyan-600" },
+  { border: "border-emerald-200", bg: "bg-emerald-50", text: "text-emerald-600", icon: "text-emerald-600" },
 ];
 
 export default function Products({ t }: ProductsProps) {
   return (
-    <section id="services" className="relative py-28 bg-[#09090b]">
+    <section id="services" className="relative py-28 bg-slate-50/50">
       <div className="absolute inset-0 bg-dots opacity-50" />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
             {t.services.sectionTitle}
           </h2>
-          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-500 max-w-2xl mx-auto">
             {t.services.sectionSub}
           </p>
         </div>
@@ -52,30 +52,30 @@ export default function Products({ t }: ProductsProps) {
             return (
               <div
                 key={i}
-                className={`group relative rounded-2xl bg-white/[0.02] border ${colors.border} p-8 hover:bg-white/[0.04] transition-all duration-300`}
+                className={`group relative rounded-2xl bg-white border ${colors.border} p-8 hover:shadow-lg hover:shadow-indigo-500/5 transition-all duration-300`}
               >
                 {/* Icon + Price row */}
                 <div className="flex items-start justify-between mb-5">
                   <div className={`w-12 h-12 rounded-xl ${colors.bg} flex items-center justify-center ${colors.icon}`}>
                     {icons[i]}
                   </div>
-                  <span className={`text-sm font-semibold ${colors.text} bg-white/5 px-3 py-1 rounded-full`}>
+                  <span className={`text-sm font-semibold ${colors.text} ${colors.bg} px-3 py-1 rounded-full`}>
                     {service.price}
                   </span>
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{service.name}</h3>
 
                 {/* Description */}
-                <p className="text-zinc-400 mb-6 leading-relaxed text-[15px]">
+                <p className="text-slate-500 mb-6 leading-relaxed text-[15px]">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2.5">
                   {service.features.map((feature, j) => (
-                    <li key={j} className="flex items-center gap-2.5 text-sm text-zinc-300">
+                    <li key={j} className="flex items-center gap-2.5 text-sm text-slate-600">
                       <svg className={`w-4 h-4 flex-shrink-0 ${colors.icon}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>

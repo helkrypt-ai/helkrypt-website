@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #a1a1aa;
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
   --accent: #6366f1;
   --accent-light: #818cf8;
-  --surface: #18181b;
-  --surface-light: #27272a;
-  --border: #27272a;
+  --surface: #f1f5f9;
+  --surface-light: #e2e8f0;
+  --border: #e2e8f0;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
@@ -62,10 +64,10 @@ html {
   50% { background-position: 100% 50%; }
 }
 
-/* Glow effect */
-.glow {
-  box-shadow: 0 0 60px rgba(99, 102, 241, 0.15),
-              0 0 120px rgba(139, 92, 246, 0.08);
+/* Soft shadow effect */
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04),
+              0 4px 24px rgba(99, 102, 241, 0.06);
 }
 
 /* Fade in animation */
@@ -99,16 +101,16 @@ html {
   opacity: 0;
 }
 
-/* Grid background pattern */
+/* Subtle grid background pattern */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 /* Dot pattern */
 .bg-dots {
-  background-image: radial-gradient(rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(99, 102, 241, 0.08) 1px, transparent 1px);
   background-size: 32px 32px;
 }
