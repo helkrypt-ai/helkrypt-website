@@ -12,9 +12,11 @@ export const translations = {
     },
     hero: {
       badge: "AI-automatisering for norske bedrifter",
-      headline: "Din partner for smartere løsninger",
+      headline: "Gjør din bedrift klar for fremtiden med AI",
       subheadline:
         "Vi hjelper norske SMB-er med å spare 5+ timer i uken gjennom AI-automatisering — fra audit til implementasjon, tilpasset din bedrift.",
+      partnerLine:
+        "Vi i Helkrypt er klare til å være din partner for smartere løsninger.",
       cta: "Book en gratis samtale",
       ctaSecondary: "Se våre tjenester",
       ctaLink: "https://calendly.com/helkrypt/30min",
@@ -164,9 +166,11 @@ export const translations = {
     },
     hero: {
       badge: "AI automation for Norwegian businesses",
-      headline: "Your partner for smarter solutions",
+      headline: "Get your business ready for the future with AI",
       subheadline:
         "We help Norwegian SMBs save 5+ hours per week through AI automation — from audit to implementation, tailored to your business.",
+      partnerLine:
+        "At Helkrypt, we're ready to be your partner for smarter solutions.",
       cta: "Book a free call",
       ctaSecondary: "See our services",
       ctaLink: "https://calendly.com/helkrypt/30min",

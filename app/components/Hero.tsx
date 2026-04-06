@@ -28,8 +28,13 @@ export default function Hero({ t }: HeroProps) {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delay-2">
+        <p className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-in-up-delay-2">
           {t.hero.subheadline}
+        </p>
+
+        {/* Partner line */}
+        <p className="text-base sm:text-lg text-indigo-600/80 font-medium max-w-xl mx-auto mb-12 animate-fade-in-up-delay-2">
+          {t.hero.partnerLine}
         </p>
 
         {/* CTAs */}
