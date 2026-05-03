@@ -160,12 +160,12 @@ export default function Contact() {
                       onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                       className={`${inputClass} appearance-none cursor-pointer`}
                     >
-                      <option value="" disabled>Velg en tjeneste…</option>
-                      <option value="automatisering">Automatisering</option>
-                      <option value="skreddersydd">Skreddersydde løsninger</option>
-                      <option value="konsultasjon">AI-konsultasjon</option>
-                      <option value="webdesign">Webdesign / Hjemmeside</option>
-                      <option value="annet">Annet</option>
+                      <option value="" disabled className="bg-[#0f1b2d] text-white">Velg en tjeneste…</option>
+                      <option value="automatisering" className="bg-[#0f1b2d] text-white">Automatisering</option>
+                      <option value="skreddersydd" className="bg-[#0f1b2d] text-white">Skreddersydde løsninger</option>
+                      <option value="konsultasjon" className="bg-[#0f1b2d] text-white">AI-konsultasjon</option>
+                      <option value="webdesign" className="bg-[#0f1b2d] text-white">Webdesign / Hjemmeside</option>
+                      <option value="annet" className="bg-[#0f1b2d] text-white">Annet</option>
                     </select>
                   </div>
 
