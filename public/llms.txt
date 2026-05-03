@@ -1,0 +1,48 @@
+# Helkrypt AI
+
+> Norsk AI-selskap som hjelper små og mellomstore bedrifter (SMB)
+> automatisere manuelle prosesser med skreddersydde AI-løsninger.
+> Fra analyse til ferdig implementering. Betjener hele Norge.
+
+Helkrypt AI AS (org.nr. 936 351 034) er et norsk aksjeselskap under
+Helkrypt Holding AS. Selskapet tilbyr fire hovedtjenester:
+AI-automatisering av manuelle prosesser, skreddersydde AI-løsninger for
+spesifikke bransjer, strategisk AI-konsultasjon, og moderne webdesign
+optimalisert for tradisjonell SEO, generativ motoroptimalisering (GEO) og
+AI-optimalisering (AIO).
+
+Marius er grunnlegger og daglig leder. Selskapet betjener kunder over hele
+Norge og kommuniserer både på norsk og engelsk.
+
+## Tjenester
+
+- [AI-automatisering](https://www.helkrypt.no/#tjenester): Automatiserer manuelle prosesser med AI. Sparer typisk 5+ timer per uke på oppgaver som ikke trenger menneskelig skjønn.
+- [Skreddersydde AI-løsninger](https://www.helkrypt.no/#tjenester): Bransjetilpassede AI-implementeringer bygget for kundens spesifikke systemer og behov.
+- [AI-konsultasjon](https://www.helkrypt.no/#tjenester): Strategisk rådgivning. Kartlegger automatiseringspotensial og leverer konkret handlingsplan.
+- [Webdesign](https://www.helkrypt.no/#tjenester): Moderne, raske hjemmesider optimalisert for PC, mobil, SEO, GEO og AIO. Pris fra 39 000 kr eks. mva + 1 900 kr/mnd drift.
+
+## Blogg og ressurser
+
+- [Blogg](https://www.helkrypt.no/blogg): Guider og innsikt om AI for norske SMB-er.
+- [Slik sparer regnskapsbedrifter 10+ timer i uken med AI](https://www.helkrypt.no/blogg/ai-automatisering-for-regnskap)
+- [SvarAI ROI-kalkulator](https://www.helkrypt.no/blogg/svarai-roi-kalkulator)
+- [Kom i gang med AI-automatisering](https://www.helkrypt.no/blogg/kom-i-gang-med-ai-automatisering)
+- [AI-trender 2026 for norske SMB](https://www.helkrypt.no/blogg/ai-trender-2026-norske-smb)
+
+## Produkter
+
+- [SvarAI](https://app.svarai.no): Helkrypts SaaS-produkt for AI-chatbot til norske SMB-er. Embeddable widget, GDPR-konform, EU-hosting. Priser fra 299 NOK/mnd.
+
+## Selskap
+
+- Navn: Helkrypt AI AS
+- Organisasjonsnummer: 936 351 034
+- Morselskap: Helkrypt Holding AS
+- Geografisk fokus: Hele Norge
+- Språk: Norsk og engelsk
+- Kontakt: marius@helkrypt.no
+
+## Personvern og juridisk
+
+- [Personvernerklæring](https://www.helkrypt.no/personvern)
+- [Privacy Policy (English)](https://www.helkrypt.no/privacy)
