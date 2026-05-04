@@ -235,7 +235,7 @@ export default function ArticleContent({ post }: ArticleContentProps) {
                 </span>
               ))}
             </div>
-            <ShareButtons title={post.title[locale]} t={t} />
+            <ShareButtons title={post.title[locale]} slug={post.slug} t={t} />
           </div>
 
           {/* CTA */}

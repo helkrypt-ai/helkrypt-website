@@ -88,11 +88,40 @@ export default async function BlogArticlePage({
     articleSection: post.category,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Hjem",
+        item: "https://www.helkrypt.no",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blogg",
+        item: "https://www.helkrypt.no/blogg",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title.no,
+        item: `https://www.helkrypt.no/blogg/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ArticleContent post={post} />
     </>

@@ -82,6 +82,15 @@ export default function Contact() {
           <p className="mt-5 text-[var(--text-muted)]">
             Fyll ut skjemaet nedenfor, så tar vi kontakt innen 24 timer for en gratis samtale om hva AI kan gjøre for din bedrift.
           </p>
+          <p className="mt-3 text-sm text-[var(--text-muted)]">
+            Eller ring direkte:{" "}
+            <a
+              href="tel:+4741457425"
+              className="text-[var(--gold)] font-semibold hover:underline"
+            >
+              +47 414 57 425
+            </a>
+          </p>
         </div>
 
         <div className="reveal reveal-delay-1 mt-12">

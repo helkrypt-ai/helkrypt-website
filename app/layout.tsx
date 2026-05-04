@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { faqSchema } from "./faq-data";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -58,6 +59,7 @@ const localBusinessSchema = {
   logo: "https://www.helkrypt.no/helkrypt-logo-white.png",
   image: "https://www.helkrypt.no/helkrypt-logo-white.png",
   email: "marius@helkrypt.no",
+  telephone: "+4741457425",
   address: {
     "@type": "PostalAddress",
     addressCountry: "NO",
@@ -71,6 +73,13 @@ const localBusinessSchema = {
     "@type": "Organization",
     name: "Helkrypt Holding AS",
   },
+  founder: {
+    "@type": "Person",
+    name: "Marius",
+    jobTitle: "Grunnlegger og daglig leder",
+    worksFor: { "@type": "Organization", name: "Helkrypt AI AS" },
+    email: "marius@helkrypt.no",
+  },
   currenciesAccepted: "NOK",
   paymentAccepted: "Invoice, Bank Transfer",
   areaServed: {
@@ -81,6 +90,7 @@ const localBusinessSchema = {
     "@type": "ContactPoint",
     contactType: "sales",
     email: "marius@helkrypt.no",
+    telephone: "+4741457425",
     availableLanguage: ["Norwegian", "English"],
   },
   sameAs: [
@@ -105,8 +115,8 @@ const serviceSchemas = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "n8n Workflow-bygg",
-    description: "Skreddersydd automatiseringsarbeidsflyt bygget med n8n. Integrer systemer som Visma, Tripletex og 24SevenOffice uten koding.",
+    name: "Workflow-automatisering",
+    description: "Skreddersydd automatiseringsarbeidsflyt. Integrer systemer som Visma, Tripletex og 24SevenOffice uten koding.",
     provider: { "@type": "LocalBusiness", name: "Helkrypt AI" },
     areaServed: { "@type": "Country", name: "Norway" },
     serviceType: "Workflow Automation",
@@ -131,59 +141,21 @@ const serviceSchemas = [
   },
 ];
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Hva er Helkrypt AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Helkrypt AI er et norsk selskap som spesialiserer seg på å hjelpe små og mellomstore bedrifter med å ta i bruk kunstig intelligens på en praktisk og lønnsom måte. Vi tilbyr AI-integrasjoner, arbeidsflytautomatisering og onboarding-programmer.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Hvilke systemer integrerer Helkrypt AI med?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Helkrypt AI integrerer sømløst med over 50 norske og internasjonale systemer, inkludert Visma, Tripletex, 24SevenOffice og Fiken. Integrasjonene krever ingen koding.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Trenger jeg teknisk kompetanse for å bruke Helkrypt AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Nei, Helkrypt AI er designet for å brukes uten koding eller store IT-ressurser. Vår visuell flytbygger og AI Onboarding Program gjør det enkelt å komme i gang, uansett teknisk bakgrunn.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Hvordan får jeg et tilbud fra Helkrypt AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Helkrypt AI tilbyr skreddersydde løsninger tilpasset din bedrifts behov. Kontakt oss for et tilpasset tilbud.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Hvordan kommer jeg i gang med Helkrypt AI?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Fyll ut kontaktskjemaet på nettsiden vår, så tar vi kontakt for en uforpliktende kartlegging av din bedrifts behov. Vi starter typisk med en AI-audit for å identifisere de største automatiseringsmulighetene.",
-      },
-    },
-  ],
-};
-
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Helkrypt AI",
   url: "https://www.helkrypt.no",
   inLanguage: ["nb-NO", "en"],
+  publisher: { "@type": "Organization", name: "Helkrypt AI AS" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.helkrypt.no/blogg?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export default function RootLayout({

@@ -5,19 +5,23 @@ import { Translations } from "../i18n";
 
 interface ShareButtonsProps {
   title: string;
+  slug: string;
   t: Translations;
 }
 
-export default function ShareButtons({ title, t }: ShareButtonsProps) {
+export default function ShareButtons({ title, slug, t }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
 
+  const shareUrl = `https://www.helkrypt.no/blogg/${slug}`;
+
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(shareUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const encodedTitle = encodeURIComponent(title);
+  const encodedUrl = encodeURIComponent(shareUrl);
 
   return (
     <div className="flex items-center gap-3">
@@ -25,7 +29,7 @@ export default function ShareButtons({ title, t }: ShareButtonsProps) {
 
       {/* LinkedIn */}
       <a
-        href={`https://www.linkedin.com/sharing/share-offsite/?url=${typeof window !== "undefined" ? encodeURIComponent(window.location.href) : ""}`}
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
         className="w-9 h-9 rounded-[6px] bg-[var(--surface-card)] hover:bg-[var(--blue-mid)]/15 border border-[var(--border-subtle)] flex items-center justify-center text-[var(--blue-light)] hover:text-[var(--gold)] transition-all duration-200"
@@ -38,7 +42,7 @@ export default function ShareButtons({ title, t }: ShareButtonsProps) {
 
       {/* X / Twitter */}
       <a
-        href={`https://x.com/intent/tweet?text=${encodedTitle}&url=${typeof window !== "undefined" ? encodeURIComponent(window.location.href) : ""}`}
+        href={`https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
         className="w-9 h-9 rounded-[6px] bg-[var(--surface-card)] hover:bg-[var(--blue-mid)]/15 border border-[var(--border-subtle)] flex items-center justify-center text-[var(--blue-light)] hover:text-[var(--gold)] transition-all duration-200"

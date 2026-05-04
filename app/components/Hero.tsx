@@ -39,13 +39,13 @@ export default function Hero() {
 
         {/* H1 */}
         <h1 className="reveal reveal-delay-1 font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] -tracking-[0.02em] text-[var(--white)]">
-          Spar 5+ timer<br />
-          <span className="text-[var(--gold)] italic">hver uke</span> med AI
+          AI-automatisering<br />
+          som sparer deg <span className="text-[var(--gold)] italic">5+ timer</span> i uken
         </h1>
 
         {/* Subheading */}
         <p className="reveal reveal-delay-2 mt-6 text-base sm:text-lg text-[var(--text-muted)] max-w-2xl mx-auto leading-relaxed">
-          Vi hjelper norske bedrifter å automatisere manuelle prosesser med skreddersydde AI-løsninger — fra analyse til ferdig implementering.
+          Vi hjelper norske SMB-er å automatisere manuelle prosesser med skreddersydde AI-løsninger — fra analyse og strategi til ferdig implementering i Visma, Tripletex, 24SevenOffice og Fiken.
         </p>
 
         {/* CTAs */}
